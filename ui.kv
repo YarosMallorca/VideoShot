@@ -1,0 +1,26 @@
+Screen:
+    ScreenManager:
+        id: screen_manager
+
+        Screen:
+            name: "mainscreen"
+
+            BoxLayout:
+                orientation: "vertical"
+                
+                BoxLayout:
+                    padding: 10
+                    spacing: 10
+                    size_hint: .5, .1
+                    pos_hint: {"center_x": .5}
+                    
+                    Button:
+                        text: "Load Video"
+                        on_release: app.loadvideo()
+                        
+                    Button:
+                        text: "Save Image"
+                        on_release: app.screenshot()
+
+                FloatLayout:
+                    id: mainfloat
